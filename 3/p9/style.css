@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: "B Koodak";
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #000;
+}
+
+.slider .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0px at center);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+
+.slider input[type="radio"]:checked + .imgBox {
+    z-index: 10;
+    clip-path: circle(1000px at center);
+transition-delay: 0.5s;
+
+}
+
+
+.slider .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .imgBox .content {
+    position: relative;
+    padding: 10px 25px;
+    text-align: center;
+    width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+}
+
+
+.slider .imgBox .content h2 {
+
+    font-size: 6em;
+    line-height: 1em;
+    text-shadow: 0 0 10px #000;
+    color: white;
+
+}
+
+
+.slider .imgBox .content p {
+
+    font-size: 1.1em;
+    text-shadow: 0 0 10px #000;
+    color: white;
+
+}
+
+.slider input[type="radio"] {
+    position: relative;
+    z-index: 1000;
+    margin: 5px;
+    margin-bottom: 40px;
+}
+
+

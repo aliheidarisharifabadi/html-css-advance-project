@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "B Koodak";
+    direction: rtl;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #262626;
+    overflow: hidden;
+    padding: 100px 20px;
+}
+
+section:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0;
+    clip-path: circle(65% at 100% -20%);
+}
+
+section:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f;
+    clip-path: circle(35% at 0% 100%);
+}
+
+.container {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.container .card .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s;
+}
+.container .card .imgBox img{
+    width: 100%;
+    margin: 0 0 20px;
+    transition: 0.5s;
+
+}
+.container .card .imgBox h2{
+    color: white;
+}
+.container .card:hover .imgBox{
+    transform: translateY(-100px);
+}
+.container .card:hover .imgBox img{
+    transform: scale(1.4) rotate(-25deg) translate(-20px,-20px);
+}
+
+.container .card .content{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+.container .card .content .size,
+.container .card .content .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.container .card .content .size h3,
+.container .card .content .color h3{
+    color: #fff;
+    font-size: 20px;
+}
+
+.container .card .content .size span{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background: #c4c4c4;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.container .card .content .size span:hover{
+    background: #ffff00;
+}
+
+.container .card .content .color span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin: 0 5px;
+}
+.container .card .content .color .red{
+    background: red;
+}
+
+.container .card .content .color .blue{
+    background: blue;
+}
+
+.container .card .content .color .yellow{
+    background: yellow;
+}
+
+
+.container .card .content a{
+    display: inline-block;
+    background: #fff;
+    text-decoration: none;
+    color: #111;
+    padding: 12px 30px;
+    border-radius: 40px;
+}
+

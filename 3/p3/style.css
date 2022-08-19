@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: "B Koodak";
+    box-sizing: border-box;
+    background-color: #262626;
+    height: 100vh;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+.container{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    margin: auto;
+}
+
+.container .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .row .column{
+    width: 400px;
+    height: 550px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.container .row .column:hover{
+    opacity: 1;
+}
+
+.container .row .column .box{
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius:150px ;
+    border-bottom-right-radius:150px ;
+    border: 3px solid #ffc98e;
+    box-shadow: 0 0 6px #323232,0 0 0 10px #ffc98e;
+
+}
+.container .row .column .box:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.1);
+
+
+
+
+}
+
+
+.container .row .column .box .title{
+    display: block;
+}
+.container .row .column .box .title span{
+    font-size: 60px;
+    color: #ffc98e;
+    margin-top: 20px;
+}
+.container .row .column .box .title h2{
+    color: white;
+    margin: 20px 0;
+}
+.container .row .column .box .price{
+    display: block;
+}
+
+
+.container .row .column .box .price h4{
+    font-size: 35px;
+    color: #ffc98e;
+    margin: 10px 0;
+}
+.container .row .column .box .option ul{
+    margin: 20px 0;
+    padding: 0;
+}
+.container .row .column .box .option ul li{
+    color: white;
+    padding: 10px 0;
+border-bottom:  1px solid rgba(255,255,255,0.1);
+}
+
+.container .row .column .box .option ul li:last-child{
+    border-bottom:none;
+}
+.container .row .column .box .option ul li span{
+    margin: 0 5px;
+}
+.container .row .column .box .btn{
+    display: inline-block;
+    background-color: #ffc98e;
+    color: #262626;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: 15px;
+}

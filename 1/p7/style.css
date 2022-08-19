@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    direction: rtl;
+}
+ul{
+ display: flex;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    display: block;
+    font-family: "B Koodak";
+    transition: 0.5s;
+}
+ul:hover li a{
+    opacity: 0.2;
+    transform: scaleX(1.5);
+    filter: blur(5px);
+}
+ul li a:hover{
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+}
+ul li a:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #ff497c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: -1;
+}
+ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+
+}

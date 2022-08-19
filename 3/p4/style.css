@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #262626;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader span{
+    font-family: Arial;
+    font-size: 50px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.1);
+    animation: animate 2s infinite;
+}
+
+
+@keyframes animate {
+
+    0%{
+        color: rgba(255,255,255,0.1);
+        transform: translateY(0);
+        margin-left: 0;
+    }
+    25%{
+        color: yellow;
+        transform: translateY(-20px);
+        margin-left: 15px;
+
+    }100%{
+             color: rgba(255,255,255,0.1);
+             transform: translateY(0);
+             margin-left: 0;
+         }
+}
+
+
+.loader span:nth-child(1){
+    animation-delay: 0.1s;
+}
+
+
+.loader span:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+
+.loader span:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+
+.loader span:nth-child(4){
+    animation-delay: 0.4s;
+}
+
+
+.loader span:nth-child(5){
+    animation-delay: 0.5s;
+}
+
+
+.loader span:nth-child(6){
+    animation-delay: 0.6s;
+}
+
+
+.loader span:nth-child(7){
+    animation-delay: 0.7s;
+}
+
+
+.loader span:nth-child(8){
+    animation-delay: 0.8s;
+}
+
+
+
+
+
+
+
