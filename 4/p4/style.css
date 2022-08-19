@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: "B Koodak";
+}
+
+body{
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: #262626;
+
+}
+
+nav .logo {
+    color: white;
+    font-size: 2.1rem;
+    font-weight: bold;
+    padding: 0 100px;
+    line-height: 80px;
+    float: left;
+}
+
+nav ul {
+    float: right;
+    margin: 0 5px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+}
+
+nav ul li a:hover {
+    color: #3636ff;
+    transition: 0.5s;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    float: right;
+    color: white;
+    display: none;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 950px) {
+    .logo {
+        font-size: 1.9rem;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .checkbtn{
+      display: block;
+  }
+ul{
+    width: 100%;
+    height: 100vh;
+    background: #00f;
+    text-align: center;
+    margin: 0 !important;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    transition: 0.5s;
+}
+
+ul li{
+    display: block !important;
+    transition: 0.5s;
+}
+    ul li:hover{
+        background: #6060ff;
+    }
+
+    ul li a{
+        font-size: 20px !important;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+
+

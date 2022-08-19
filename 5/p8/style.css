@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Vazir;
+    box-sizing: border-box;
+    direction: rtl;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #262626;
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #803f00;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+
+.card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+
+}
+.card .imgBox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.card:hover .imgBox{
+    top: 0;
+    transform: translateY(0%);
+}
+
+
+.card .imgBox img{
+    width: 270px;
+    transform: rotate(-25deg);
+}
+
+
+
+
+.card .contentBox{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    transition: 0.5s;
+}
+.card:hover .contentBox{
+    height: 210px;
+}
+
+
+
+.card .contentBox h2{
+color: white;
+    letter-spacing: 1px;
+}
+.card .contentBox .taste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 20px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover .contentBox .taste{
+    opacity: 1;
+}
+.card .contentBox .taste span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 26px;
+    text-align: center;
+    color: #262626;
+    background: white;
+    margin: 5px;
+    padding: 0 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card .contentBox .taste span:hover{
+    background: #ffd700;
+}
+
+.card .contentBox a{
+    display: inline-block;
+    background: white;
+    text-decoration: none;
+    color: #111;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top:10px ;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover .contentBox a{
+    opacity: 1;
+}

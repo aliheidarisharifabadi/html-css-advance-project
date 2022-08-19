@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Vazir;
+    background: beige;
+    direction: rtl;
+}
+
+.row{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row .card{
+    width: 380px;
+    height: auto;
+    background: white;
+    text-align: center;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.2),
+    0 20px 50px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+.row .card .head{
+    padding: 50px;
+    background: linear-gradient(45deg,#f321d6,#5121f3);
+    border-bottom-right-radius:50% ;
+    border-bottom-left-radius:50% ;
+}
+.row .card .head h4{
+    color: white;
+    margin: 0;
+}
+
+.row .card .head h2{
+    margin: 0;
+    color: white;
+    padding: 20px 0 0;
+    font-size: 36px;
+}
+
+.row .card .content ul{
+list-style: none;
+    padding: 20px 0;
+}
+.row .card .content ul li{
+    font-size: 16px;
+    padding: 10px 0;
+    color: #777;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.row .card .content ul li:hover{
+    border-right: 15px solid #f321d6;
+    border-left: 15px solid #f321d6;
+    background: #eee;
+}
+.btn{
+    padding: 0 0 30px;
+}
+.btn a{
+    background: linear-gradient(45deg,#f321d6,#5121f3);
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+}

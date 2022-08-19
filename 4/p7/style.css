@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div{
+    width: 80px;
+    height: 80px;
+    background-color: #262626;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+}
+
+div span{
+    color: white;
+    font-size: 2rem !important;
+    transition: 0.7s;
+}
+
+div:hover{
+    box-shadow: 0 0 0 1500px #262626;
+    background-color: white;
+}
+div:hover span{
+    color: #262626;
+}
