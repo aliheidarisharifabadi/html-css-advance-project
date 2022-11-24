@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #393939;
+}
+
+label{
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background: #212121;
+    border-radius: 10px;
+}
+
+input{
+    appearance: none;
+}
+label span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 5px solid #212121;
+    transition: 0.5s ease-in-out;
+}
+
+label input:checked ~ span{
+    left: 75px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5),
+        inset 0 0 4px rgba(16, 125, 206, 0.5);
+}

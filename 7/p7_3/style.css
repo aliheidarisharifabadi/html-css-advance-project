@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    background: #ccc;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.mytabs{
+    display: flex;
+    width: 600px;
+    padding: 25px;
+    flex-wrap: wrap;
+}
+
+.mytabs input[type="radio"]{
+    display: none;
+}
+
+.mytabs label{
+    background: #e2e2e2;
+    font-size: 27px;
+    padding: 25px;
+    order: 0;
+}
+
+.mytabs .tab{
+    width: 100%;
+    background: white;
+    display: none;
+    padding: 55px 20px;
+    order: 1;
+}
+.mytabs input[type="radio"]:checked + label + .tab{
+ display: block;
+}
+
+.mytabs input[type="radio"]:checked + label{
+    background: white;
+}
+.mytabs .tab h2,.mytabs .tab p{
+    background: white;
+}

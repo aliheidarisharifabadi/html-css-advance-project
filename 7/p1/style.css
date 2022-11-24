@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.txt {
+    font-size: 2em;
+    letter-spacing: 3px;
+    box-shadow: 10px 0 0 #f00;
+    overflow-x: hidden;
+    animation: txtanim 5s steps(11) infinite;
+}
+
+@keyframes txtanim {
+    0%,90%,100%{
+        width: 0;
+    }
+    30%, 60% {
+        width: 198.96px;
+    }
+}

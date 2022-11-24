@@ -1,68 +1,125 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Vazir;
+    direction: rtl;
+    text-decoration: none;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+ul {
+    list-style: none;
+}
+
+
+body {
     height: 100vh;
-    background: #eee;
+    overflow: hidden;
 }
-.loader{
+
+header {
+    background: #262626;
+    color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
-.loader span{
+
+header .logo {
+    font-size: 25px;
+    color: white;
+}
+
+header .navbar ul li {
+    float: right;
     position: relative;
-    width: 50px;
-    height: 20px;
+}
+
+header .navbar ul li a {
+    display: block;
+    font-size: 15px;
+    padding: 20px;
+    color: white;
+}
+
+header .navbar ul li a:hover {
     background: #eee;
-    margin: 0 10px;
-    border-radius: 20px;
-    border: 3px solid #eee;
-    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),
-    8px 8px 15px rgba(0,0,0,0.2),
-    inset 3px 3px 5px rgba(0,0,0,0.1),
-    inset -1px -1px 5px rgba(255,255,255,0.1);
+    color: #262626;
 }
 
-.loader span:before{
-    content: '';
+header .navbar ul li ul {
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 0;
+    background: #555;
+    width: 200px;
+    display: none;
+}
+
+header .navbar ul li ul li {
     width: 100%;
-    height: 100%;
-    background: #ff3737;
-    border-radius: 20px;
-    transform: scale(0);
-    box-shadow: inset 3px 3px 5px rgba(0,0,0,0.1),
-            inset -1px -1px 5px rgba(255,255,255,0.1);
-    animation: anim 3s linear infinite,anim_color 5s linear infinite;
-    animation-delay: calc(var(--i) * 0.2s);
+}
+
+header .navbar ul li ul li ul {
+    right: 200px;
+    top: 0;
 }
 
 
-@keyframes anim {
-    0%,9.8%,50%{
-        transform: scale(0);
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 850px) {
+    header {
+        padding: 20px;
     }
-    10%,49.8%{
-        transform: scale(1);
+
+    header label {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        background: #555555;
+        left: 0;
+        right: 0;
+        top: 100%;
+        transition: 0.6s;
+    }
+
+    header .navbar ul li {
+        width: 100%;
 
     }
-}
-@keyframes anim_color {
-    0%{
-        filter: hue-rotate(0deg);
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+        right: 30px;
     }
-    100%{
-        filter: hue-rotate(360deg);
+    header .navbar ul li ul li ul{
+        width: 100%;
+        right: 40px;
     }
+#menu:checked ~ .navbar{
+    top: 11%;
 }
+
+}
+
+
 
 
 

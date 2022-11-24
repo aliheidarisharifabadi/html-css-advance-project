@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 320px;
+    height: 320px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}
+
+.card:hover .bax{
+    transform: rotateY(180deg);
+}
+
+.card .bax {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+
+.card .bax .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.card .bax .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .bax .contentBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+
+
+.card .bax .contentBox div{
+    padding: 20px;
+    background: linear-gradient(#ff5858, #db8d19);
+    transform: translateZ(100px);
+}
+
+
+.card .bax .contentBox div h2{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.card .bax .contentBox div p{
+    color: white;
+    font-size: 16px;
+}
+
